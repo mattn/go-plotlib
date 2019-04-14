@@ -3,21 +3,15 @@ package plotlib
 import (
 	"bufio"
 	"bytes"
-	"log"
-
-	"github.com/mattn/go-pairplot"
-	"github.com/olekukonko/tablewriter"
-
-	"gonum.org/v1/plot"
-	"gonum.org/v1/plot/vg"
-
-	"bufio"
 	"io/ioutil"
+	"log"
 
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/vg"
 
 	"github.com/golang/freetype/truetype"
+	"github.com/mattn/go-pairplot"
+	"github.com/olekukonko/tablewriter"
 )
 
 func MarkdownCSV(filename string) string {
