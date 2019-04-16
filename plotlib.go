@@ -49,7 +49,7 @@ func PairPlotCSV(filename string) []byte {
 }
 
 func DefaultFont(fontpath, fontname string) {
-	bb, err := ioutil.ReadFile("/etc/alternatives/fonts-japanese-gothic.ttf")
+	bb, err := ioutil.ReadFile(fontpath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -57,12 +57,6 @@ func DefaultFont(fontpath, fontname string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	vg.AddFont("IPAGothic", ttf)
-	/*
-		defaultFont, err := vg.MakeFont("IPAGothic", 12)
-		if err != nil {
-			log.Fatal(err)
-		}
-	*/
-	plot.DefaultFont = "IPAGothic"
+	vg.AddFont(fontname, ttf)
+	plot.DefaultFont = fontname
 }
