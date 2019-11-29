@@ -35,7 +35,6 @@ func PairPlotCSV(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
-	pp.SetHue("Name")
 	p.HideAxes()
 	p.Add(pp)
 	w, err := p.WriterTo(4*vg.Inch, 4*vg.Inch, "png")
