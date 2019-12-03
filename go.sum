@@ -18,12 +18,6 @@ github.com/jung-kurt/gofpdf v1.0.3-0.20190309125859-24315acbbda5 h1:PJr+ZMXIecYc
 github.com/jung-kurt/gofpdf v1.0.3-0.20190309125859-24315acbbda5/go.mod h1:7Id9E/uU8ce6rXgefFLlgrJj/GYY22cpxn+r32jIOes=
 github.com/jung-kurt/gofpdf v1.16.2 h1:jgbatWHfRlPYiK85qgevsZTHviWXKwB1TTiKdz5PtRc=
 github.com/jung-kurt/gofpdf v1.16.2/go.mod h1:1hl7y57EsiPAkLbOwzpzqgx1A30nQCk/YmFV8S2vmK0=
-github.com/mattn/go-pairplot v0.0.0-20191102123914-6b30ac265ad1 h1:E1L02MA4MgOsb5ymwnFbZbA0UmmZQdtd+WibhJ3lui8=
-github.com/mattn/go-pairplot v0.0.0-20191102123914-6b30ac265ad1/go.mod h1:RoAUXR4uxE0dOqigscWhy3oHgQqUZuwQJnzZzrKNmo4=
-github.com/mattn/go-pairplot v0.0.1 h1:uOyn/cyY/gKpP49lGTPyGgiyn+jUIDf7KhdM34R2Mi4=
-github.com/mattn/go-pairplot v0.0.1/go.mod h1:iqBkmHVnjAwUvje8ZANvMugTo14FX72dUnW0KxAP2uM=
-github.com/mattn/go-pairplot v0.0.2 h1:0wiyaWrqZX/kmqZ9OWpgSL1EHGJSqQTYyypLgem9Xhg=
-github.com/mattn/go-pairplot v0.0.2/go.mod h1:P8X2ccstpynbEUxbB8tgesIrcvEOAcCHy1jY/NXnaa8=
 github.com/mattn/go-pairplot v0.0.3 h1:34/Dkt5muOEL+d4HdpoAmBPGc94OuZ1H/gWzmHgcNtQ=
 github.com/mattn/go-pairplot v0.0.3/go.mod h1:9RQf0dADkPV4EHaRtvW20kisxQMf8kMmHEEC0S37VF4=
 github.com/mattn/go-runewidth v0.0.6 h1:V2iyH+aX9C5fsYCpK60U8BYIvmhqxuOL3JZcqc1NB7k=
