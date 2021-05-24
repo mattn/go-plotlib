@@ -7,11 +7,12 @@ import (
 	"log"
 
 	"gonum.org/v1/plot"
+	"gonum.org/v1/plot/font"
 	"gonum.org/v1/plot/vg"
 
-	"github.com/golang/freetype/truetype"
 	"github.com/mattn/go-pairplot"
 	"github.com/olekukonko/tablewriter"
+	"golang.org/x/image/font/sfnt"
 )
 
 func MarkdownCSV(filename string) string {
@@ -27,10 +28,7 @@ func MarkdownCSV(filename string) string {
 }
 
 func PairPlotCSV(filename string) []byte {
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+	p := plot.New()
 	pp, err := pairplot.NewPairPlotCSV(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -52,10 +50,10 @@ func DefaultFont(fontpath, fontname string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	ttf, err := truetype.Parse(bb)
+	ttf, err := sfnt.Parse(bb)
 	if err != nil {
 		log.Fatal(err)
 	}
 	vg.AddFont(fontname, ttf)
-	plot.DefaultFont = fontname
+	plot.DefaultFont.Typeface = font.Typeface(fontname)
 }
