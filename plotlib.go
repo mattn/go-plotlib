@@ -12,7 +12,7 @@ import (
 
 	"github.com/mattn/go-pairplot"
 	"github.com/olekukonko/tablewriter"
-	"golang.org/x/image/font/sfnt"
+	"golang.org/x/image/font/opentype"
 )
 
 func MarkdownCSV(filename string) string {
@@ -50,10 +50,15 @@ func DefaultFont(fontpath, fontname string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	ttf, err := sfnt.Parse(bb)
+	ttf, err := opentype.Parse(bb)
 	if err != nil {
 		log.Fatal(err)
 	}
-	vg.AddFont(fontname, ttf)
+	font.DefaultCache.Add([]font.Face{
+		{
+			Font: font.Font{Typeface: font.Typeface(fontname)},
+			Face: ttf,
+		},
+	})
 	plot.DefaultFont.Typeface = font.Typeface(fontname)
 }
