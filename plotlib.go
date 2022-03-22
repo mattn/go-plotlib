@@ -8,6 +8,7 @@ import (
 
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/font"
+	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/vg"
 
 	"github.com/mattn/go-pairplot"
@@ -54,11 +55,13 @@ func DefaultFont(fontpath, fontname string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	mfont := font.Font{Typeface: font.Typeface(fontname)}
 	font.DefaultCache.Add([]font.Face{
 		{
-			Font: font.Font{Typeface: font.Typeface(fontname)},
+			Font: mfont,
 			Face: ttf,
 		},
 	})
-	plot.DefaultFont.Typeface = font.Typeface(fontname)
+	plot.DefaultFont = mfont
+	plotter.DefaultFont = mfont
 }
